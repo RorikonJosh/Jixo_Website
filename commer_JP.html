@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIGHTFOX</title>
+    <link rel="stylesheet" href="comstyles.css">
+</head>
+<body>
+    <!-- Top part (all same in different pages)-->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Jixo_Logo" class="logo-img">
+            </a>
+            
+            <!-- Guide Buttons -->
+            <div class="nav-buttons" id="navButtons">
+                <a href="index.html" class="nav-btn">ホーム</a>
+                <a href="arts_JP.html" class="nav-btn">作品集</a>
+                <a href="commer_JP.html" class="nav-btn">リクエスト</a>
+                <a href="contact_JP.html" class="nav-btn">連絡</a>
+            </div>
+
+            <div class="custom-language-selector">
+                <div class="selected-language" onclick="toggleLanguageDropdown()">
+                    <span class="language-icon">🌐</span>
+                    <span class="selected-text">日本語</span>
+                    <span class="dropdown-arrow">▼</span>
+                </div>
+                <div class="language-dropdown-menu" id="languageDropdown">
+                    <a href="commer_JP.html" class="language-option current">
+                        <span>日本語</span>
+                        <span class="check-mark">✓</span>
+                    <a href="commer_CN.html" class="language-option current">
+                        <span>繁體中文</span>
+                        <span class="check-mark">✓</span>
+                    </a>
+                    <a href="commer_EN.html" class="language-option current">
+                        <span>English</span>
+                        <span class="check-mark">✓</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Brand Introduction -->
+    <div class="brand-introduction">
+        <div class="brand-card">
+            <div class="brand-image">
+                <img src="a.jpg" alt="Request Logo" class="brand-img">
+            </div>
+
+        <div class="brand-content">
+                <h2>リクエストお知らせ</h2>
+                
+                <div class="price-section">
+                    <h3>💰 価格説明</h3>
+                    <p><strong>ちびキャラ：500~1000NT</strong></p>
+                    <p><strong>アイコン、胸像：1200-2000NT</strong></p>
+                    <p><strong>イラスト規格(大腿以上，足の部分はありません)：3000-5000NT</strong></p>
+                    <p><strong>全身絵、立ち絵：5000-8000NT</strong></p>
+                    <p><strong>R18 OK！ R18-G NG！</strong></p>
+                    <p class="note">※二人以上 元の価格に人数倍</p>
+                    <p class="note">※背景あります 追加料金は300-700NT(單色と白い背景は必要ない)</p>
+                    <p class="note">※キャラの服をデサントする 追加料金は800NT</p>
+                    <p class="note">※コンテンツを考えるのに助けする 追加料金は800NT</p>
+                </div>
+
+                <div class="process-section">
+                    <h3>🎨 プロセス</h3>
+                    <p>※差分あるの場合は追加料金があるかもしれません！</p>
+                    <p>第二回レビュー時、つまり最終稿の準備段階では、大きな変更（例えば全体的なアクションなど）を1つ、小さな変更（例えば色、細かい形状など）を3つ加えることができます。</p>
+                    <p class="warning">※もし変更回数が超過しなら、毎回の追加料金は500NTです※</p>
+                    <p>※最終の価格はクライアントの要件に応じて変更します。※</p>
+                    <p>他の問題ありますなら、お問い合わせを歓迎します！</p>
+                </div>
+
+                <div class="rights-section">
+                    <h3>📝 著作権に関する声明</h3>
+                    <p>(上記作品の著作権は著者本人に帰属します)</p>
+                    <hr>
+                    <p><strong>設計稿に関する：</strong></p>
+                    <p><strong>買い切り10000NT以上</strong> (著作権を買います)</p>
+                    <p><strong>買い切れない5000NT以上</strong> (作品の著作権は著者本人に帰属します，転売不可 改変不可 商用利用不可です！)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--!-- Bottom Banner -->
+        <div class="bottom-banner">
+            <div class="copyright">
+                © 2025 彼夜公式. / RORONEKO All rights reserved.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navButtons = document.getElementById('navButtons');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navButtons.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navButtons.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            const selected = document.querySelector('.selected-language');
+            
+            dropdown.classList.toggle('show');
+            selected.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const selector = document.querySelector('.custom-language-selector');
+            if (!selector.contains(event.target)) {
+                const dropdown = document.getElementById('languageDropdown');
+                const selected = document.querySelector('.selected-language');
+                dropdown.classList.remove('show');
+                selected.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop();
+        const options = document.querySelectorAll('.language-option');
+        
+        options.forEach(option => {
+            const href = option.getAttribute('href');
+            option.classList.remove('current');
+            
+            if (href === currentPage || 
+                (currentPage === 'home.html' && href === 'home.html') ||
+                (currentPage.includes('_CN') && href.includes('_CN')) ||
+                (currentPage.includes('_EN') && href.includes('_EN')) ||
+                (currentPage.includes('_JP') && href.includes('_JP'))) {
+                option.classList.add('current');
+                }
+            });
+        });
+    </script>    
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIGHTFOX</title>
+    <link rel="stylesheet" href="comstyles.css">
+</head>
+<body>
+    <!-- Top part (all same in different pages)-->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <!-- Logo -->
+            <a href="home_CN.html" class="logo">
+                <img src="logo.png" alt="Jixo_Logo" class="logo-img">
+            </a>
+            
+            <!-- Guide Buttons -->
+            <div class="nav-buttons" id="navButtons">
+                <a href="home_CN.html" class="nav-btn">主頁</a>
+                <a href="arts_CN.html" class="nav-btn">作品</a>
+                <a href="commer_CN.html" class="nav-btn">委托</a>
+                <a href="contact_CN.html" class="nav-btn">聯絡</a>
+            </div>
+
+            <div class="custom-language-selector">
+                <div class="selected-language" onclick="toggleLanguageDropdown()">
+                    <span class="language-icon">🌐</span>
+                    <span class="selected-text">繁體中文</span>
+                    <span class="dropdown-arrow">▼</span>
+                </div>
+                <div class="language-dropdown-menu" id="languageDropdown">
+                    <a href="contact_CN.html" class="language-option current">
+                        <span>繁體中文</span>
+                        <span class="check-mark">✓</span>
+                    </a>
+                    <a href="contact_JP.html" class="language-option current">
+                        <span>日本語</span>
+                        <span class="check-mark">✓</span>
+                    </a>
+                    <a href="contact_EN.html" class="language-option current">
+                        <span>English</span>
+                        <span class="check-mark">✓</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Brand Introduction -->
+    <div class="brand-introduction">
+        <div class="brand-card">
+            <div class="brand-image">
+                <img src="jixo_face.jpg" alt="Contact Logo" class="brand-img">
+            </div>
+
+        <div class="brand-content">
+                <h2>聯絡</h2>
+                
+                <div class="price-section">
+                    <h3>✉️ 郵件</h3>
+                    <p><strong>電郵地址：jixo0407@gmail.com</strong></p>
+                    <p class="note">※透過郵件查詢委托與其他問題！※</p>
+                </div>
+
+                <div class="process-section">
+                    <h3>𝕏 Twitter</h3>
+                    <p><strong>獲得更多的貼文與媒體資訊！</strong></p>
+                    <a href="https://x.com/jixo95821699?ref_src=twsrc%5Etfw" class="nav-btn">Twitter點這裏！</a>
+                </div>
+
+                <div class="rights-section">
+                    <h3>🅿️ Pixiv</h3>
+                    <p><strong>獲得更多作品資訊！</strong></p>
+                    <a href="https://www.pixiv.net/users/31690832" class="nav-btn">Pixiv點這裏！</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--!-- Bottom Banner -->
+        <div class="bottom-banner">
+            <div class="copyright">
+                © 2025 彼夜公式. / RORONEKO All rights reserved.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navButtons = document.getElementById('navButtons');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navButtons.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navButtons.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            const selected = document.querySelector('.selected-language');
+            
+            dropdown.classList.toggle('show');
+            selected.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const selector = document.querySelector('.custom-language-selector');
+            if (!selector.contains(event.target)) {
+                const dropdown = document.getElementById('languageDropdown');
+                const selected = document.querySelector('.selected-language');
+                dropdown.classList.remove('show');
+                selected.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop();
+        const options = document.querySelectorAll('.language-option');
+        
+        options.forEach(option => {
+            const href = option.getAttribute('href');
+            option.classList.remove('current');
+            
+            if (href === currentPage || 
+                (currentPage === 'home.html' && href === 'home.html') ||
+                (currentPage.includes('_CN') && href.includes('_CN')) ||
+                (currentPage.includes('_EN') && href.includes('_EN')) ||
+                (currentPage.includes('_JP') && href.includes('_JP'))) {
+                option.classList.add('current');
+                }
+            });
+        });
+    </script>    
+</body>
+</html>
