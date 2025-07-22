@@ -13,3 +13,8 @@ Link: https://rorikonjosh.github.io/Jixo_Website/
 - The image of page changed to better version
 - Added "stop" page which will only show when he request is close.
 2025-07-17
+
+--------------------------------------------------------------------------------------------
+## Version 2.0--
+- Self-Introduction updated
+2025-07-22
