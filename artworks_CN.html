@@ -11,39 +11,39 @@
     <header class="header" id="header">
         <nav class="nav-container">
             <!-- Logo -->
-            <a href="index.html" class="logo">
+            <a href="home_CN.html" class="logo">
                 <img src="logo.png" alt="Jixo_Logo" class="logo-img">
             </a>
             
             <!-- Guide Buttons -->
             <div class="nav-buttons" id="navButtons">
-                <a href="index.html" class="nav-btn">ホーム</a>
-                <a href="artworks_JP.html" class="nav-btn">作品集</a>
-                <a href="commer_JP.html" class="nav-btn">リクエスト</a>
-                <a href="contact_JP.html" class="nav-btn">連絡</a>
+                <a href="home_CN.html" class="nav-btn">主頁</a>
+                <a href="arts_CN.html" class="nav-btn">作品</a>
+                <a href="commer_CN.html" class="nav-btn">委托</a>
+                <a href="contact_CN.html" class="nav-btn">聯絡</a>
             </div>
 
             <div class="custom-language-selector">
                 <div class="selected-language" onclick="toggleLanguageDropdown()">
                     <span class="language-icon">🌐</span>
-                    <span class="selected-text">日本語</span>
+                    <span class="selected-text">繁體中文</span>
                     <span class="dropdown-arrow">▼</span>
                 </div>
                 <div class="language-dropdown-menu" id="languageDropdown">
-                    <a href="commer_JP.html" class="language-option current">
-                        <span>日本語</span>
-                        <span class="check-mark">✓</span>
-                    </a>
-                    <a href="commer_CN.html" class="language-option current">
+                    <a href="artworks_CN.html" class="language-option current">
                         <span>繁體中文</span>
                         <span class="check-mark">✓</span>
                     </a>
-                    <a href="commer_EN.html" class="language-option current">
+                    <a href="artworks_JP.html" class="language-option current">
+                        <span>日本語</span>
+                        <span class="check-mark">✓</span>
+                    </a>
+                    <a href="artworks_EN.html" class="language-option current">
                         <span>English</span>
                         <span class="check-mark">✓</span>
                     </a>
                 </div>
-            </div>
+            </div>   
 
             <!-- Mobile Toggle -->
             <div class="mobile-toggle" id="mobileToggle">
@@ -54,49 +54,73 @@
         </nav>
     </header>
 
-    <!-- Brand Introduction -->
-    <div class="brand-introduction">
-        <div class="brand-card">
-            <div class="brand-image">
-                <img src="a.jpg" alt="Request Logo" class="brand-img">
-            </div>
+    <!-- artwork Page -->
+    <section id="artwork" class="section-padding">
+        <div class="container">    
+            <div class="artwork-grid">
+            <!-- artworks -->
+                <a href="https://www.pixiv.net/artworks/133721266" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork1.jpg" alt="Artwork 1">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2025.8.10 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">こんな時はどうすればいいのか、よく分からなくて、ごめん</div>
+                    </div>
+                </a>
 
-        <div class="brand-content">
-                <h2>リクエストお知らせ</h2>
-                
-                <div class="price-section">
-                    <h3>💰 価格説明</h3>
-                    <p><strong>ちびキャラ：500~1000NT</strong></p>
-                    <p><strong>アイコン、胸像：1200-2000NT</strong></p>
-                    <p><strong>イラスト規格(大腿以上，足の部分はありません)：3000-5000NT</strong></p>
-                    <p><strong>全身絵、立ち絵：5000-8000NT</strong></p>
-                    <p><strong>R18 OK！ R18-G NG！</strong></p>
-                    <p class="note">※二人以上 元の価格に人数倍</p>
-                    <p class="note">※背景あります 追加料金は300-700NT(單色と白い背景は必要ない)</p>
-                    <p class="note">※キャラの服をデサントする 追加料金は800NT</p>
-                    <p class="note">※コンテンツを考えるのに助けする 追加料金は800NT</p>
-                </div>
+                <a href="https://www.pixiv.net/artworks/131853848" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork2.jpg" alt="Artwork 2">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2025.6.22 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">……本当に、夢みたいです……せんせえ……ありがとうございます</div>
+                    </div>
+                </a>
 
-                <div class="process-section">
-                    <h3>🎨 プロセス</h3>
-                    <p>※差分あるの場合は追加料金があるかもしれません！</p>
-                    <p>第二回レビュー時、つまり最終稿の準備段階では、大きな変更（例えば全体的なアクションなど）を1つ、小さな変更（例えば色、細かい形状など）を3つ加えることができます。</p>
-                    <p class="warning">※もし変更回数が超過しなら、毎回の追加料金は500NTです※</p>
-                    <p>※最終の価格はクライアントの要件に応じて変更します。※</p>
-                    <p>他の問題ありますなら、お問い合わせを歓迎します！</p>
-                </div>
+                <a href="https://www.pixiv.net/artworks/129068611" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork3.jpg" alt="Artwork 3">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2025.4.7 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">「本気を出すわよ——燃え尽きても知らないんだからっ！」</div>
+                    </div>
+                </a>
 
-                <div class="rights-section">
-                    <h3>📝 著作権に関する声明</h3>
-                    <p>(上記作品の著作権は著者本人に帰属します)</p>
-                    <hr>
-                    <p><strong>設計稿に関する：</strong></p>
-                    <p><strong>買い切り10000NT以上</strong> (著作権を買います)</p>
-                    <p><strong>買い切れない5000NT以上</strong> (作品の著作権は著者本人に帰属します，転売不可 改変不可 商用利用不可です！)</p>
-                </div>
+                <a href="https://www.pixiv.net/artworks/123857704" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork4.jpg" alt="Artwork 4">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2024.10.31 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">「先生がいくらお菓子をくれても無駄だよ」</div>
+                    </div>
+                </a>
+
+                <a href="https://www.pixiv.net/artworks/123482185" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork5.jpg" alt="Artwork 5">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2024.10.19 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">「先生、少し暑くはないかの？」</div>
+                    </div>
+                </a>
+
+                <a href="https://www.pixiv.net/artworks/122816028" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork6.jpg" alt="Artwork 6">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2024.9.27 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">「先生、キキを抱っこしてくれませんか？お願い！お願い！」</div>
+                    </div>
+                </a>
+            
             </div>
         </div>
-    </div>
 
         <!--!-- Bottom Banner -->
         <div class="bottom-banner">
@@ -140,6 +164,7 @@
     </script>
 
 
+    <!-- The code part of languadge list -->
     <script>
         function toggleLanguageDropdown() {
             const dropdown = document.getElementById('languageDropdown');
@@ -168,7 +193,7 @@
             option.classList.remove('current');
             
             if (href === currentPage || 
-                (currentPage === 'home.html' && href === 'home.html') ||
+                (currentPage === 'home.html' && href === 'home.html') ||  // check if the page is in JP EN CN and show tick next to the lang on the list
                 (currentPage.includes('_CN') && href.includes('_CN')) ||
                 (currentPage.includes('_EN') && href.includes('_EN')) ||
                 (currentPage.includes('_JP') && href.includes('_JP'))) {
@@ -176,6 +201,7 @@
                 }
             });
         });
-    </script>    
+    </script>   
+    
 </body>
 </html>

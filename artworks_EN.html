@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIGHTFOX</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="comstyles.css">
 </head>
 <body>
     <!-- Top part (all same in different pages)-->
     <header class="header" id="header">
         <nav class="nav-container">
             <!-- Logo -->
-            <a href="index.html" class="logo">
+             <a href="home_EN.html" class="logo">
                 <img src="logo.png" alt="Jixo_Logo" class="logo-img">
             </a>
             
             <!-- Guide Buttons -->
             <div class="nav-buttons" id="navButtons">
-                <a href="index.html" class="nav-btn">ホーム</a>
-                <a href="artworks_JP.html" class="nav-btn">作品集</a>
-                <a href="commer_JP.html" class="nav-btn">リクエスト</a>
-                <a href="contact_JP.html" class="nav-btn">連絡</a>
+                <a href="home_EN.html" class="nav-btn">Home</a>
+                <a href="artworks_EN.html" class="nav-btn">Artworks</a>
+                <a href="commer_EN.html" class="nav-btn">Request</a>
+                <a href="contact_EN.html" class="nav-btn">Contact</a>
             </div>
 
             <div class="custom-language-selector">
                 <div class="selected-language" onclick="toggleLanguageDropdown()">
                     <span class="language-icon">🌐</span>
-                    <span class="selected-text">日本語</span>
+                    <span class="selected-text">English</span>
                     <span class="dropdown-arrow">▼</span>
                 </div>
                 <div class="language-dropdown-menu" id="languageDropdown">
-                    <a href="stop_JP.html" class="language-option current">
-                        <span>日本語</span>
-                        <span class="check-mark">✓</span>
-                    <a href="stop_CN.html" class="language-option current">
-                        <span>繁體中文</span>
+                    <a href="artworks_EN.html" class="language-option current">
+                        <span>English</span>
                         <span class="check-mark">✓</span>
                     </a>
-                    <a href="stop_EN.html" class="language-option current">
-                        <span>English</span>
+                    <a href="artworks_JP.html" class="language-option current">
+                        <span>日本語</span>
+                        <span class="check-mark">✓</span>
+                    </a>
+                    <a href="artworks_CN.html" class="language-option current">
+                        <span>繁體中文</span>
                         <span class="check-mark">✓</span>
                     </a>
                 </div>
@@ -53,27 +54,73 @@
         </nav>
     </header>
 
-    <!-- Main dimen Section -->
-    <section class="md" id="home">
+    <!-- artwork Page -->
+    <section id="artwork" class="section-padding">
+        <div class="container">    
+            <div class="artwork-grid">
+            <!-- artworks -->
+                <a href="https://www.pixiv.net/artworks/133721266" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork1.jpg" alt="Artwork 1">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2025.8.10 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">こんな時はどうすればいいのか、よく分からなくて、ごめん</div>
+                    </div>
+                </a>
 
-    <!-- Brand Introduction -->
-    <div class="brand-introduction">
-        <div class="brand-card">
-            <div class="brand-image">
-                <img src="stop.png" alt="STOP Request" class="brand-img">
-            </div>
+                <a href="https://www.pixiv.net/artworks/131853848" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork2.jpg" alt="Artwork 2">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2025.6.22 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">……本当に、夢みたいです……せんせえ……ありがとうございます</div>
+                    </div>
+                </a>
 
-        <div class="brand-content">
-                <h2>申し訳ございません、現在リクエストは受け付けておりません。</h2>
+                <a href="https://www.pixiv.net/artworks/129068611" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork3.jpg" alt="Artwork 3">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2025.4.7 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">「本気を出すわよ——燃え尽きても知らないんだからっ！」</div>
+                    </div>
+                </a>
 
-                <div class="rights-section">
-                    <h3>お知らせ</h3>
-                    <p><strong>詳細については、Twitterをフォローしてください！</strong></p>
-                    <a href="https://x.com/jixo95821699" class="nav-btn">Twitterはこちら！</a>
-                </div>
+                <a href="https://www.pixiv.net/artworks/123857704" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork4.jpg" alt="Artwork 4">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2024.10.31 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">「先生がいくらお菓子をくれても無駄だよ」</div>
+                    </div>
+                </a>
+
+                <a href="https://www.pixiv.net/artworks/123482185" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork5.jpg" alt="Artwork 5">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2024.10.19 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">「先生、少し暑くはないかの？」</div>
+                    </div>
+                </a>
+
+                <a href="https://www.pixiv.net/artworks/122816028" class="artwork-item" target="_blank">
+                    <div class="artwork-image">
+                        <img src="artwork6.jpg" alt="Artwork 6">
+                    </div>
+                    <div class="artwork-info">
+                        <div class="artwork-date">2024.9.27 | RELEASE | Pixiv</div>
+                        <div class="artwork-title">「先生、キキを抱っこしてくれませんか？お願い！お願い！」</div>
+                    </div>
+                </a>
+            
             </div>
         </div>
-    </div>
 
         <!--!-- Bottom Banner -->
         <div class="bottom-banner">

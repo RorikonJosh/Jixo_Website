@@ -18,3 +18,10 @@ Link: https://rorikonjosh.github.io/Jixo_Website/
 ## Version 2.0--
 - Self-Introduction updated
 2025-07-22
+
+--------------------------------------------------------------------------------------------
+## Version 3.0--
+- Artworks page finished
+- Users can click the image in artwork page and link to Pixiv
+- Contact section class error fixed
+2025-08-11

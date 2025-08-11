@@ -653,3 +653,143 @@ body {
         padding: 6px 8px;
     }
 }
+
+/* artwork Section */
+#artwork {
+  min-height: auto;
+  margin-top: 80px;
+  padding: 2rem 0 0 0;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* artwork Grid Container */
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 2.5rem;
+  margin: 2rem auto 0 auto;
+  max-width: 1400px;
+  padding: 0 2rem;
+  width: 100%;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Individual artwork Item */
+.artwork-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: inherit !important;
+  border: none !important;
+  outline: none;
+  cursor: pointer;
+}
+
+.artwork-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* artwork Image Container */
+.artwork-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.artwork-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  transition: transform 0.3s ease;
+  background: #f8f9fa;
+}
+
+.artwork-item:hover .artwork-image img {
+  transform: scale(1.08);
+}
+
+/* artwork Info Section */
+.artwork-info {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+.artwork-date {
+  font-size: 0.875rem;
+  color: #F4A6CD;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.artwork-title {
+  font-size: 1.2rem;
+  color: #0B1F66;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* react - tablet */
+@media (max-width: 1024px) {
+  .artwork-grid {
+    gap: 1.8rem 2rem;
+    max-width: 1000px;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .artwork-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1.8rem;
+    padding: 0 1rem;
+  }
+  
+  .artwork-image {
+    aspect-ratio: 4/3;
+  }
+  
+  .artwork-info {
+    padding: 1.2rem;
+  }
+  
+  .artwork-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .artwork-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem 0;
+    padding: 0 1rem;
+  }
+  
+  .artwork-image {
+    aspect-ratio: 16/9;
+  }
+  
+  .artwork-info {
+    padding: 1rem;
+  }
+  
+  .artwork-date {
+    font-size: 0.8rem;
+  }
+  
+  .artwork-title {
+    font-size: 1.1rem;
+  }
+}
